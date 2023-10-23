@@ -8,6 +8,10 @@ InputManager& InputManager::Instance() {
     return *instance;
 }
 
+InputManager::InputManager() {
+
+}
+
 void InputManager::Init(sf::Window& window) {
     window.setKeyRepeatEnabled(false);
 

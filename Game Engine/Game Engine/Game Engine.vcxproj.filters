@@ -14,11 +14,11 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
     <Filter Include="Assets">
-      <UniqueIdentifier>{454ab062-09e7-44aa-b92c-f3768e516f05}</UniqueIdentifier>
+      <UniqueIdentifier>{a8f8e560-b8ca-4ff8-94ed-736e55b3b94e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="AssetManager.cpp">
@@ -30,43 +30,61 @@
     <ClCompile Include="InputManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="C:\Users\loren\Downloads\BasicsGameDevelopment_RookieEngine_PortToCpp\grundlagen-game-development-engine\Assets\crystal.png">
-      <Filter>Assets</Filter>
-    </Image>
-    <Image Include="C:\Users\loren\Downloads\BasicsGameDevelopment_RookieEngine_PortToCpp\grundlagen-game-development-engine\Assets\LavaTile.png">
-      <Filter>Assets</Filter>
-    </Image>
-    <Image Include="C:\Users\loren\Downloads\BasicsGameDevelopment_RookieEngine_PortToCpp\grundlagen-game-development-engine\Assets\playerSpriteSheet.png">
-      <Filter>Assets</Filter>
-    </Image>
-    <Image Include="C:\Users\loren\Downloads\BasicsGameDevelopment_RookieEngine_PortToCpp\grundlagen-game-development-engine\Assets\projectile.png">
-      <Filter>Assets</Filter>
-    </Image>
-    <Image Include="C:\Users\loren\Downloads\BasicsGameDevelopment_RookieEngine_PortToCpp\grundlagen-game-development-engine\Assets\skull.png">
-      <Filter>Assets</Filter>
-    </Image>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="C:\Users\loren\Downloads\BasicsGameDevelopment_RookieEngine_PortToCpp\grundlagen-game-development-engine\Assets\musicTrack.ogg">
-      <Filter>Assets</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Media Include="C:\Users\loren\Downloads\BasicsGameDevelopment_RookieEngine_PortToCpp\grundlagen-game-development-engine\Assets\completeSound.wav">
-      <Filter>Assets</Filter>
-    </Media>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AssetManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DebugDraw.h">
+    <ClInclude Include="Player.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="InputManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="DebugDraw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="..\Assets\completeSound.wav">
+      <Filter>Assets</Filter>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Assets\crystal.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="..\Assets\LavaTile.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="..\Assets\playerSpriteSheet.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="..\Assets\projectile.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="..\Assets\skull.png">
+      <Filter>Assets</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Assets\musicTrack.ogg">
+      <Filter>Assets</Filter>
+    </None>
   </ItemGroup>
 </Project>

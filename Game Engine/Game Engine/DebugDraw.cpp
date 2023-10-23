@@ -9,6 +9,11 @@ DebugDraw& DebugDraw::Instance() {
     return *instance;
 }
 
+DebugDraw::DebugDraw() {
+
+}
+
+
 void DebugDraw::Initialize(sf::RenderWindow* renderWindow) {
     window = renderWindow;
 }

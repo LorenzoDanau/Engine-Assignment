@@ -79,10 +79,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SFMLROOT)/include;$(TGUIROOT)/include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SFMLROOT)\lib;$(TGUIROOT)/lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);sfml-graphics-d.lib;sfml-audio-d.lib;sfml-window-d.lib;sfml-system-d.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -112,7 +115,8 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SFMLROOT)/lib;$(TGUIROOT)/lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SFMLROOT)\lib;$(TGUIROOT)/lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);sfml-graphics-d.lib;sfml-audio-d.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -137,25 +141,31 @@
     <ClCompile Include="AssetManager.cpp" />
     <ClCompile Include="DebugDraw.cpp" />
     <ClCompile Include="InputManager.cpp" />
-    <ClCompile Include="main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="C:\Users\loren\Downloads\BasicsGameDevelopment_RookieEngine_PortToCpp\grundlagen-game-development-engine\Assets\crystal.png" />
-    <Image Include="C:\Users\loren\Downloads\BasicsGameDevelopment_RookieEngine_PortToCpp\grundlagen-game-development-engine\Assets\LavaTile.png" />
-    <Image Include="C:\Users\loren\Downloads\BasicsGameDevelopment_RookieEngine_PortToCpp\grundlagen-game-development-engine\Assets\playerSpriteSheet.png" />
-    <Image Include="C:\Users\loren\Downloads\BasicsGameDevelopment_RookieEngine_PortToCpp\grundlagen-game-development-engine\Assets\projectile.png" />
-    <Image Include="C:\Users\loren\Downloads\BasicsGameDevelopment_RookieEngine_PortToCpp\grundlagen-game-development-engine\Assets\skull.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="C:\Users\loren\Downloads\BasicsGameDevelopment_RookieEngine_PortToCpp\grundlagen-game-development-engine\Assets\musicTrack.ogg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Media Include="C:\Users\loren\Downloads\BasicsGameDevelopment_RookieEngine_PortToCpp\grundlagen-game-development-engine\Assets\completeSound.wav" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AssetManager.h" />
     <ClInclude Include="DebugDraw.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="GameObject.h" />
     <ClInclude Include="InputManager.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="..\Assets\completeSound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Assets\crystal.png" />
+    <Image Include="..\Assets\LavaTile.png" />
+    <Image Include="..\Assets\playerSpriteSheet.png" />
+    <Image Include="..\Assets\projectile.png" />
+    <Image Include="..\Assets\skull.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Assets\musicTrack.ogg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

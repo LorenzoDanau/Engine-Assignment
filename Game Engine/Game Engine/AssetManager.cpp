@@ -1,7 +1,7 @@
-#include "AssetManager.h"
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio/SoundBuffer.hpp>
 #include <SFML/Audio/Music.hpp>
+#include "AssetManager.h"
 
 std::map<std::string, sf::Texture> AssetManager::Textures;
 std::map<std::string, sf::SoundBuffer> AssetManager::SoundBuffers;

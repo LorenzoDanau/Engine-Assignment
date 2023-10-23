@@ -9,14 +9,16 @@ private:
     std::map<sf::Keyboard::Key, bool> isKeyPressed;
     std::map<sf::Keyboard::Key, bool> isKeyUp;
 
-    InputManager() = default;
+    InputManager(); // Private constructor
+
+    // Static pointer to the instance
+    static InputManager* instance;
 
 public:
-    static InputManager& Instance() {
-        static InputManager instance;  // Created once and only once
-        return instance;
-    }
+    // Static method to access the instance
+    static InputManager& Instance();
 
+    // Delete copy constructor and assignment operator
     InputManager(const InputManager&) = delete;
     void operator=(const InputManager&) = delete;
 

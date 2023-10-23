@@ -1,6 +1,6 @@
 #include "InputManager.h"
 
-InputManager* InputManager::instance = nullptr;
+InputManager* InputManager::instance = nullptr; // Define the static member
 
 InputManager& InputManager::Instance() {
     if (!instance)

@@ -5,13 +5,16 @@
 class DebugDraw {
 private:
     sf::RenderWindow* window;
-    DebugDraw() {} // Private constructor
+
+    // Private constructor
+    DebugDraw();
+
+    // Static pointer to the instance
+    static DebugDraw* instance;
 
 public:
-    static DebugDraw& Instance() {
-        static DebugDraw instance; // Meyers Singleton
-        return instance;
-    }
+    // Static method to access the instance
+    static DebugDraw& Instance();
 
     void Initialize(sf::RenderWindow* renderWindow);
     void DrawLine(const sf::Vector2f& startPoint, const sf::Vector2f& endPoint, sf::Color color);

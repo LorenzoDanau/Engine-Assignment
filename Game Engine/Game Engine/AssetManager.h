@@ -1,10 +1,10 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
-#include <string>
-#include <map>
 #include <SFML/Audio/SoundBuffer.hpp>
 #include <SFML/Audio/Music.hpp>
+#include <string>
+#include <map>
 #include <memory>
 
 // no singleton implementation needed for this class

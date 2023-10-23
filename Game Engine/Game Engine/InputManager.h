@@ -5,13 +5,21 @@
 
 class InputManager {
 private:
-    static InputManager* instance;
     std::map<sf::Keyboard::Key, bool> isKeyDown;
     std::map<sf::Keyboard::Key, bool> isKeyPressed;
     std::map<sf::Keyboard::Key, bool> isKeyUp;
 
+    InputManager() = default;
+
 public:
-    static InputManager& Instance();
+    static InputManager& Instance() {
+        static InputManager instance;  // Created once and only once
+        return instance;
+    }
+
+    InputManager(const InputManager&) = delete;
+    void operator=(const InputManager&) = delete;
+
     void Init(sf::Window& window);
     void Update();
     bool GetKeyPressed(sf::Keyboard::Key key);

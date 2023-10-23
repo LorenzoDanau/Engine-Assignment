@@ -7,6 +7,7 @@
 #include <SFML/Audio/Music.hpp>
 #include <memory>
 
+// no singleton implementation needed for this class
 class AssetManager {
 public:
     static std::map<std::string, sf::Texture> Textures;

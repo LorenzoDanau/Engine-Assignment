@@ -64,17 +64,14 @@ void Game::Run() {
 void Game::HandleEvents() {
     sf::Event event;
     while (window.pollEvent(event)) {
-        switch (event.type) {
-        case sf::Event::Closed:
+        if (event.type == sf::Event::Closed) {
             window.close();
-            break;
-        case sf::Event::KeyPressed:
-            if (event.key.code == sf::Keyboard::Escape) {
-                window.close();
-            }
-            break;
-        default:
-            break;
+        }
+        else if (event.type == sf::Event::KeyPressed) {
+            InputManager::Instance().OnKeyPressed(event.key.code);
+        }
+        else if (event.type == sf::Event::KeyReleased) {
+            InputManager::Instance().OnKeyReleased(event.key.code);
         }
     }
 }
@@ -141,6 +138,8 @@ bool HasReadAccess(const std::string& filePath) {
     std::ifstream file(filePath);
     return file.is_open();
 }
+
+
 
 int main() {
     Game game;

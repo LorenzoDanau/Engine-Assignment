@@ -2,6 +2,7 @@
 #include "AssetManager.h"
 #include "DebugDraw.h"
 #include "InputManager.h"
+#include <iostream>
 
 Player::Player() {
     AssetManager::LoadTexture("Character", "../Assets/playerSpriteSheet.png");
@@ -22,8 +23,8 @@ void Player::Draw(sf::RenderWindow& window) {
     window.draw(animatedSprite);
 
     sf::Vector2f rectPosition(animatedSprite.getGlobalBounds().left, animatedSprite.getGlobalBounds().top);
-    int rectWidth = static_cast<int>(animatedSprite.getGlobalBounds().width);
-    int rectHeight = static_cast<int>(animatedSprite.getGlobalBounds().height);
+    int rectWidth = static_cast<int>(std::round(animatedSprite.getGlobalBounds().width));
+    int rectHeight = static_cast<int>(std::round(animatedSprite.getGlobalBounds().height));
 
     DebugDraw::Instance().DrawRectOutline(rectPosition, rectWidth, rectHeight, sf::Color::Red);
 

@@ -42,7 +42,7 @@ private:
 
     sf::Sprite animatedSprite;
     int animationTypeFramesCount[8] = { 3, 3, 1, 3, 10, 10, 10, 10 };
-    float animationTimeIndex;
+    float animationTimeIndex = 0.0f;
     sf::Vector2i colliderSize = { 50, 60 };
     AnimationType m_animationType = AnimationType::IdleDown;
     static constexpr float MoveSpeed = 150.0f;
